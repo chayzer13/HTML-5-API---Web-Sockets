@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>API, WebSocket и SSE</h1>
+
+    <div class="data-selection">
+      <label for="data-select">Выберите тип данных:</label>
+      <select id="data-select">
+        <option value="users">Пользователи</option>
+        <option value="posts">Посты</option>
+      </select>
+      <button onclick="fetchData()">Загрузить данные</button>
+    </div>
+
+    <ul id="data-list"></ul>
+
+    <hr>
+
+    <h2>Чат в реальном времени</h2>
+    <ul id="messages"></ul>
+    <input type="text" id="chat-input" placeholder="Введите сообщение">
+    <button onclick="sendMessage()">Отправить сообщение</button>
+
+    <hr>
+
+    <h2>Обновления в реальном времени:</h2>
+    <ul id="sse-updates"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
